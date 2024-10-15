@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--
+ *         Copyright (C) 2021  Vince Streif
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+-->
+<HTML>
+<HEAD>
+<TITLE>
+History
+</TITLE>
+<!-- Changed by: Vince Streif, June 2021 -->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>History</H1>
+<p>
+The history of javaBenzer goes back to the spring of 1980 when I (VS) 
+took an undergraduate genetics course from John Jungck. While preparing
+for the final exam, I decided to write a computerized tool to produce sample
+problems that I could practice solving. Although the Apple II was on the
+market by then, they were still less than common, and the IBM PC did not
+yet exist.  We did have access to a Tektronix Graphics Terminal which could
+be programmed in BASIC, so I produced a program about a hundred lines long
+to generate randmon problems (poorly).
+
+<p>
+A few years later, John worked with Peder Junck and Stephen Everse to
+transfer it to run on an Apple II. In addition, they added a graphical 
+interface to allow you to re-arrange columns of data and display the
+updated problem.
+
+<p>
+I was surprised when I saw their work a few years later and began considering
+the possibility of porting it to other operating system and extending it.
+With John's support, I decided to re-write it in the c computer language
+and port it to the IBM PC running Microsoft operating systems. The biggest
+internal change was a significantly improved problem generation alogorithm
+which solved most of original's difficultes in producing consistent,
+solvable problems.
+
+<p>
+Supporting the program on multiple hardware/operating system platforms 
+was highly desired, but quite difficult. In the mid-1990's, the language,
+Java, appeared. Since Java used a virtual environment customized for each
+hardware/operating system combination and application software ran within
+this environment, the goal of supporting the program across multiple 
+platforms seemed to be attainable. So I (VS) performed another re-write 
+of the program to move it from c to Java, producing the first version
+of javaBenzer.
+
+<p>
+javaBenzer had a number of advances allowing users to customize their
+experience while keeping the maintenance of the code base relatively
+simple.  I released occasional patches to fix bugs or add minor
+functionality, but javaBenzer remainded relatively stable for the
+following two decades.
+
+<p>
+However, computer languages are dynamic, they change as technology and
+software "best practices" change. By 2020, javaBenzer was starting to
+show its age. Some functions stopped working because Java had changed 
+and it would take more than trivial patches to restore that functionality.
+Growing bored during the COVIDi-19 Pandemic, I decided to put some
+significant work into javaBenzer in March 2021. After about a month,
+I realized that I was extremely dissatified with the internal structure
+of the code base and decided to re-write javaBenzer from the ground up.
+This was a significant undertaking because it had grown to about 6500 
+lines of code and it took me about four months to reach the point of a
+new, public release, javaBenzer 7.
+
+<p>
+javaBenzer 7 is a little smaller than the previous version (about 6000 
+lines of code) and encompasses the previous functionally, broken bits
+(e.g. printing) have been repaired and some new fuctions added. Since
+the help system framework I was using is now dead, I produced a simple 
+set of web pages that are accessed using the computer's default web
+browser. I've also added a simple "undo" function, which was often 
+requested. If you accidentally drag a row or column to the wrong place,
+typing control-z will undo that move (with a few restrictions). It will
+produce text listings of both items and cliques, as well as draw graphs
+showing item connectivity (i.e interactions). There are lots of minor
+improvements, most of which are described in the "menu" pages.
+
+<p>
+Enjoy!
+<br> <br>
+Vince Streif
+<br>
+August 2021
+
+<hr>
+<pre>
+<font size="-1">
+Copyright 2021 Vince Streif. All rights reserved.
+</font>
+</pre>
+
+<p>
+<a href="javaBenzer.html">Back</a>
+
+</BODY>
+</HTML>

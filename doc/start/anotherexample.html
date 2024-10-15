@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--       
+ *        Copyright (C) 2021  Vince Streif
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+-->
+<HTML>
+<HEAD>
+<TITLE>
+Another Example
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Another Example</h1>
+<p>
+In the following example, I will display the interaction matrix 
+(also referred to as the recombination matrix) as a collection of 
+light and dark boxes.  The light boxes refer to mutants which were 
+able to form wild-type offspring via cross-over between there 
+genetic material.  The dark boxes indicate that no such events 
+were observed.  The dark boxes on the main diagonal are present by
+definition, because the interaction of a deletion mutant with itself 
+is unable to produce wild-type recombinants.
+
+<p>
+After starting the program, I selected &lt;File&gt; --&gt; &lt;New&gt; and chose 
+the &lt;Random&gt; option.  When asked, I specified that there would be 
+10 (ten) deletion mutants and 6 (six) deletion regions.  The resulting 
+problem was as follows:
+
+<p>
+<!-- <img src="images/example2-1.jpg"> -->
+<img src="images/example2-1.png">
+
+<p>
+This display was produced by &lt;Panel&gt; --&gt; &lt;Shkurba&gt; and then &lt;Items&gt;.
+
+<p>
+One good first strategy when trying to order these mutants is to 
+group all the light boxes in the bottom row on the left side and all 
+the dark boxes on the right.  Next you do the same thing on the next 
+row up, taking care not to change the pattern of the lower row(s) 
+and only proceeding from the left edge of the matrix to the main 
+diagonal).  Repeat this until you reach the top of the matrix.
+
+<p>
+The resulting display appears as follows:
+
+<p>
+<!-- <img src="images/example2-2.jpg"> -->
+<img src="images/example2-2.png">
+
+<p>
+Notice that the ordering isn’t perfect, in particular, it looks 
+like Gamma and Theta are probably in the wrong places.  
+A little further manipulation shows that a proper "arrowhead" 
+pattern can be established by moving Zeta and Theta to the 
+right end of the row.  This produces the following display:
+
+<p>
+<!-- <img src="images/example2-3.jpg"> -->
+<img src="images/example2-3.png">
+
+<p>
+Obviously, I could reverse the order entirely.  This would still 
+give me an "arrowhead" pattern, it would just point to the upper 
+left instead of the lower right.  Also, note that Beta doesn’t 
+overlap with any of the other mutants, so I could shift just that 
+item all the way to the other side and still have a valid pattern.  
+As I said before, these solutions are not necessarily unique, but 
+they do describe the data.
+
+<p>
+Now, I can read the maximal cliques from this display, 
+
+<p>
+<blockquote>
+<pre>
+(Theta, Zeta)
+(Zeta, Kappa, Iota, Delta)
+(Zeta, Kappa, Delta, Epsilon)
+(Zeta, Delta, Epsilon, Eta, Alpha)
+(Delta, Epsilon, Eta, Gamma)
+(Beta)
+</pre>
+</blockquote>
+
+<p>
+or I can go to the menu and then choose &lt;Panel&gt;
+--&gt; &lt;Display&gt; and the option &lt;Cliques&gt;
+which will show me the following:
+
+<p>
+<blockquote>
+<pre>
+Clique = { Member Items }
+
+Arizona    = {Gamma, Delta, Epsilon, Eta}
+Alabama    = {Alpha, Delta, Epsilon, Zeta, Eta}
+Alaska     = {Kappa, Delta, Epsilon, Zeta}
+Arkansas   = {Iota, Kappa, Delta, Zeta}
+Colorado   = {Zeta, Theta}
+California = {Beta}
+</pre>
+</blockquote>
+
+<p>
+Although the order is different, you should be able to convince 
+yourself that the cliques are the same.
+
+<p>
+Selecting &lt;Panel&gt; --&gt; &lt;Shkurba&gt; and &lt;Cliques&gt; produces the following display:
+
+<p>
+<!-- <img src="images/example2-4.jpg"> -->
+<img src="images/example2-4.png">
+
+<p>
+Which isn’t actually too far from a completed answer.  If we swap 
+a few deletion regions around, we get a valid ordering:
+
+<p>
+<!-- <img src="images/example2-5.jpg"> -->
+<img src="images/example2-5.png">
+
+<p>
+Since we assume that each mutation consists of a single deletion, a
+ valid ordering of the deletion areas is one in which each deletion 
+(the dark boxes) is a single unit for any single column.
+
+<p>
+Note again that Beta and hence clique California, which has Beta as 
+its only member, are totally disconnected from the others, so any 
+of the following are perfectly good orders:
+
+<p>
+<blockquote>
+<pre>
+California-Colorado-Arkansas-Alaska-Alabama-Arizona
+Colorado-Arkansas-Alaska-Alabama-Arizona-California
+Arizona-Alabama-Alaska-Arkansas-Colorado-California
+California-Arizona-Alabama-Alaska-Arkansas-Colorado
+</pre>
+</blockquote>
+
+<p>
+The only way to select one of these as a unique answer is by 
+running more experiments to gather more data and then refining 
+our solution.
+
+<p>
+<a href="heuristic.html">Back</a>
+<a href="bibliography.html">Next</a>
+</BODY>
+</HTML>

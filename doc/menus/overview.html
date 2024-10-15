@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--
+ *         Copyright (C) 2021  Vince Streif
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+-->
+<HTML>
+<HEAD>
+<TITLE>
+Menu Overview
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Menu Overview</H1>
+<p>
+This program was originally designed to deal with deletion mapping 
+of the genetic fine structure, but it works with many other types of
+problems, too. Basically, it provides a way to visualize and manipulate
+data sets where the data items form clusters. There are a few terms that 
+you need to be familiar with in order to understand these help pages.
+
+<p>
+<ul>
+	<li>
+Item - An item is simply a data element which may (or may not) interact
+with other data elements. In deletion mapping, these items are clone cell
+lines. In food webs, they are species of organisms.
+	</li>
+<br/>
+	<li>
+Clique - A clique is a group of items which all interact with each other.
+In a high school, they might be a group of students that hang out together.
+In deletion mapping, they are a group of mutants where the missing DNA
+fragments overlap (so they can't recombine to product a wild-type). In a 
+food web, they are a bunch of organisms that all compete for the same food 
+source (e.g. eagles and foxes both eat rabbits).
+<br/>
+<br/>
+In graph theory terminology, the cliques we are concerned with are actually
+"maximal cliques", which just means that they are as big as they can be --
+there are no items not in this clique which interact with every item already
+in this clique.  If we were to try and add another
+item to a clique, it would turn out that it fails to interact with at
+least one of the items currently in the clique (that's what makes this
+clique "maximal"). Since all the cliques we are concerned with are "maximal",
+we will just refer to them as cliques.
+	</li>
+<br/>
+	<li>
+Panel - A panel is simply a particular way of displaying (or changing the data).
+This program has three major types of panels.
+<ol>
+	<li>
+Shkurba (and its Edit sub-type) - which shows a matrix of iteractions between
+items or which items belong to which cliques. In the Edit sub-type, you can 
+change those interactions or the labels on the rows and columns of the matrix, 
+as well as the descriptions in the "key box" for that panel.
+</li>
+<li>
+Display - this is just a simple textual description of the items and which
+other items they interact with, or the cliques and which items are members of 
+them
+</li>
+<li>
+Graph - these are diagrams showing which items interact with each other 
+(intersection) or the negation of that, items which do <b>not</b> interact
+with each other (complementary).
+</li>
+</ol>
+	</li>
+</ul>
+
+<p>
+The program presents a menu along the top of the screen with a 
+number of major tabs:
+
+<dd> <a href="file.html">File</a> 
+<dd> <a href="panel.html">Panel</a> 
+<dd> <a href="order.html">Order</a> 
+<dd> <a href="options.html">Options</a> 
+<dd> <a href="help.html">Help</a> 
+</dd>
+
+<p>
+The menu system is hierarchical, in that many selections provide a choice of
+other selections (e.g. "File" allows you to "Open" a file, "Save" a file,
+"Print" something or "Exit" the program). You need to click on a top level
+selection (e.g. "File") to open its sub-menu, but simply mousing over a lower
+level selection will show its options (if any).
+
+<p>
+<a href="../javaBenzer.html">Up</a>
+</BODY>
+</HTML>

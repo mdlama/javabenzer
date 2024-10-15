@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/usr/bin/invoke_app "$@" -t javabenzer \
+			 -w captive \
+			 -C java \
+			 -A "-jar @tool/bin/javaBenzer.jar" \
+			 -c filexfer

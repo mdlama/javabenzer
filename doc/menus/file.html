@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--
+ *         Copyright (C) 2021  Vince Streif
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+-->
+<HTML>
+<HEAD>
+<TITLE>
+File Menu
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+	<center><H1>File Menu</H1></center>
+
+<table width=100% border=0 cellspacing=12>
+<tr valign="top">
+<td width=10%><h2>New...</h2></td>
+<td width=90%>
+Allows user to create a new problem via one of two methods.
+  <table width=100% border=0 cellspacing=12>
+  <tr valign="top">
+    <td width=10%><strong>Random</strong></td>
+    <td width=90%>
+	    This selection is really only useful for deletion mapping 
+	    problems because its algorithms depend on a knowledge of
+	    the biology underlying this type of problem. <br/><br/>
+    The program will ask for the number of mutants you wish to 
+    generate, and it will allow you to choose the number of 
+    deletion regions to be identified.  FYI, experience 
+    has shown that mutant/deletion region ratios of about 2:1 
+    tend to produce interesting problems.
+    <br/><br/>
+    Currently, there are three different algorithms available for generating 
+    problems (unimaginatively called "generate_0 method", "generate_1 method"
+    and "generate_2 method"). You can select whichever you want of the three.
+    All three generate legitimate problems, but there are qualitative
+    differences in the likely layouts of the deletion regions. Personally,
+    I recommend using "generate_2". It produces problems that resemble a
+    cross between those produced by the other two methods.
+    </td>
+    </tr>
+
+  <tr valign="top">
+    <td width=10%><strong>User Input</strong></td>
+    <td width=90%>
+    The program will first ask for the number of items you wish
+    to enter data for, then it will invoke a GUI interface (the
+    same used by Panel --> Edit... --> Items) to 
+    allow you to enter overlap data for the  problem. Essentially, 
+    you click on a square of the interaction matrix to change its
+    state.  Matching cells mirrored across the diagonal will be 
+    changed automatically.  Hint: if corresponding cells <b>don't</b>
+    match in a deletion mapping data set, the problem is inconsistent.
+    </td>
+    </tr>
+
+  </table>
+</td>
+</tr>
+
+<tr valign="top">
+<td width=10%></td>
+<td width=90%>
+In either case, default names will be assigned to the items by the program.
+The default names are of the form "Item #xx", where "xx" is a number from 1
+to the number of items that you specified. The width of this field will be
+adjusted so it is wide enough to represent the largest item number. Leading
+zeroes will be added for smaller numbers.
+
+<p>
+You can change these names by clicking on a row or column label and entering 
+name you want (e.g. if you want "Item #01" to be "Timber Wolf", instead).
+You can change the labels in the "Key Box" (in the upper right of the panel)
+in the same way.
+
+<p>
+If you decide to change them later, you can always select the correct Edit panel
+and do the same things.
+
+<p>
+Note: Edit -> Cliques will let you change the labels and the key text, but not 
+which items belong to a particular clique. 
+</td>
+
+</tr>
+
+<tr valign="top">
+<td><h2>Open...</h2></td>
+<td>
+Opens an existing file containing a saved problem. Note that all files 
+used to store problems are in a csv (commqa separated value) format which is
+familiar to Excel and a number of other spreadsheet programs. You can use one
+of those to view or edit the data and the result (saved as a csv) should still
+be usable by javaBenzer.
+
+<p>
+These files don't need to have a "csv" extension, but it's not a bad practice,
+just to remind you what format it's in, and it helps Excel know how to open them.
+
+<p>
+The default location for these files is in a folder named "data" which is in the 
+same directory as the javaBenzer.jar file.
+</td>
+
+<tr valign="top">
+<td><h2>Import</h2></td>
+<td>
+Imports a problem from a csv file created with an older version of javaBenzer 
+(5.x or before). The major difference is that instead of a list of items that 
+each item interacts with, it has a matrix of one's and zero's indicating 
+if each item interacts (or not) with every other item. The "Export" option
+(further down this page) will save a problem in this format.
+</tr>
+
+<tr>
+<th colspan=2><hr></th>
+</tr>
+
+<tr valign="top">
+<td><h2>Save</h2></td>
+<td>
+Saves the problem currently being processed using the file's current name. 
+<br/>
+The first time you try and save a problem after either randomly generating it 
+or entering it manually, this option will be grayed out because there is no
+current filename to use. Instead, use "Save As...".
+</td>
+</tr>
+
+<tr valign="top">
+<td><h2>Save As...</h2></td>
+<td>
+Saves the problem currently being processed
+with a name you provide using a file chooser dialog box. 
+Note that filenames should end with the "csv" extension 
+because the format of the save file is consistent with 
+the "Comma Separated Value" format used by Microsoft Excel.
+This means that Excel can read and write javaBenzer-compatible 
+files.
+
+<p>
+The default location for these files is in a folder named "data" which is in the 
+same directory as the javaBenzer.jar file.
+
+<p>
+If there is already a file with that name, you will be asked for confirmation
+before it is overwritten.
+</td>
+</tr>
+
+<tr valign="top">
+<td><h2>Export...</h2></td>
+<td>
+Exports the problem currently being processed in the older javaBenzer format 
+(verion 5.x or before). This is th reciprocal function of "Import" described above.
+</tr>
+
+<tr>
+<th colspan=2><hr></th>
+</tr>
+
+<tr valign="top">
+<td><h2>Print...</h2></td>
+<td>
+Sends the panel currently displayed to a printer.
+</td>
+</tr>
+
+<tr valign="top">
+<td><h2>Print Preview</h2></td>
+<td>
+Opens a window showing the appearance of individual printed pages
+to be produced if the current panel were to be sent to a printer.
+</td>
+</tr>
+
+<tr valign="top">
+<td><h2>Page Setup...</h2></td>
+<td>
+Allows user to set values to be used when the "Print" function in invoked.
+</td>
+</tr>
+
+<tr>
+<th colspan=2><hr></th>
+</tr>
+
+<tr valign="top">
+<td><h2>Exit</h2></td>
+<td>
+Quits the javaBenzer application.
+</td>
+</tr>
+
+</table>
+
+<p>
+<a href="overview.html">Up</a>
+</BODY>
+</HTML>

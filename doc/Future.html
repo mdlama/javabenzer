@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--
+ *         Copyright (C) 2021  Vince Streif
+ *                    All rights reserved.
+ *          Notice of copyright on this source code 
+ *          product does not indicate publication. 
+ * 
+-->
+<HTML>
+<HEAD>
+<TITLE>
+Future Directions
+</TITLE>
+<!-- Changed by: Vince Streif, June 2021 -->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Future Directions</H1>
+<p>
+There are a number of extensions that didn't make it into javaBenzer 7, but may be added in the future.
+
+<ul>
+	<li>
+		The spectre that overshadows everything else is automated problem solution.
+		I (VS) developed the necessary algorithm back in the 1990's. However...
+		<ul>
+			<li>
+				Having that available in a teaching tool does serious damage
+				to its pedagogical value. If I can come up with a good solution
+				to this issue, I'd love to make it available for use in a
+				research setting, but don't expect to find it in javaBenzer
+				any time soom.
+			</li>
+			<li>
+				Another thorny problem is what to do in the case of less than
+				perfect data. With consistent data, producing a solution is
+				trivial. However, if even a single interaction data point is
+				"wrong", the algorithm may chase its own tail forever trying
+				to produce a "perfect" solution.
+			</li>
+			<li>
+				Even if the data is perfect, solutions are not typically unique.
+				Even beyond flipping the entire solution end-for-end, there 
+				can be smaller sections that could be ordered in different 
+				ways. How do I make it obvious that this is one of a number of
+				possible solutions? For teaching this doesn't matter much, but
+				it could be crucial in research.
+			</li>
+		</ul>
+	</li>
+	<li>
+		Selecting (and moving) a group of rows (or columns) at the same time. There
+		are a number of considerations for this item.
+		<ol>
+			<li>
+				For students, the problems are typically small enough that this
+				doesn't provide significant value. During testing, I've solved
+				problems with hundreds of items and cliques, and I acutely felt
+				the need for that functionality.
+			</li>
+			<li>
+				The display becomes a little confusing since the program can't
+				determine if the user is selecting rows or columns until they
+				perform a move or Order operation.
+			</li>
+			<li>
+				If I did allow group selection, I'd also extend the Order 
+				operations (Sort/Reverse) to operate on selected groups, rather
+				than the entire problem.
+			</li>
+		</ol>
+	</li>
+	<li>
+		It would be nice (for large problems) to enable autoscrolling, so when you
+		dragged the mouse out of the displayed area, the view scrolled. Again, not 
+		particularly valuable for small problems, but saves a lot of effort on large 
+		problems.
+
+	</li>
+	<li>
+		It would be nice to perform random problem generation for other types of
+		problems than just deletion mapping (e.g. food webs). Unfortunately, most
+		clustering problems have customized restrictions on what constitutes a
+		valid problem, so each problem generator would need to be customized as well.
+	</li>
+</ul>
+
+<hr>
+<pre>
+<font size="-1">
+Copyright 2021 Vince Streif. All rights reserved.
+</font>
+</pre>
+
+<p>
+<a href="javaBenzer.html">Back</a>
+
+</BODY>
+</HTML>
